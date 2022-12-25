@@ -1,6 +1,6 @@
 import { charCountToTokenCount } from './gptTokenizer'
 
-export function cleanAndChunkText(text, maxToken = 600) {
+export function cleanAndChunkText(text, maxToken = 550) {
   // First, clean the input text by removing excess whitespace and newlines
   text = text.trim().replace(/\s+/g, ' ')
 

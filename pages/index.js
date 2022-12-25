@@ -43,36 +43,35 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>read4me</title>
+        <title>read4u</title>
       </Head>
       <div className="container">
-        <div className="header">
-          <div className="header-title">
-            <h1>Gimme the tldr version</h1>
-          </div>
-          <div className="header-subtitle">
-            <h2>
-              Paste text here and generate a concise and clear summary. Good for
-              long-ass articles.
-            </h2>
-          </div>
-        </div>
         <div className="prompt-container">
-          <div className="prompt-box-container">
-            <textarea
-              placeholder={placeholderInput}
-              className="prompt-box"
-              value={userInput}
-              onChange={onUserChangedText}
-            />
+          <div className="header">
+            <div className="header-title">
+              <h1>Gimme the tldr version</h1>
+            </div>
+            <div className="header-subtitle">
+              <h2>
+                Paste text here and generate an effective 1 min summary. Good
+                for long-ass articles.
+              </h2>
+            </div>
           </div>
+
+          <textarea
+            placeholder={placeholderInput}
+            className="prompt-box"
+            value={userInput}
+            onChange={onUserChangedText}
+          />
 
           <div className="prompt-buttons">
             <p className="reading-time">
               {userInput &&
-                `estimated reading time is ${estimatedReadingTime(
-                  userInput
-                )} mins`}
+                `estimated reading time is ${estimatedReadingTime(userInput)} ${
+                  estimatedReadingTime(userInput) > 1 ? 'mins' : 'min'
+                }`}
             </p>
             <a
               className={
@@ -84,26 +83,24 @@ const Home = () => {
                 {isGenerating ? (
                   <span className="loader"></span>
                 ) : (
-                  <p>Ask 🙏</p>
+                  <p>Summarise 🙏</p>
                 )}
               </div>
             </a>
           </div>
-          {apiOutput && (
-            <div className="output">
-              <div className="output-header-container">
-                <div className="output-header">
-                  <h3>🌈 Here's your answer 🌈 </h3>
-                </div>
-              </div>
-              <div className="output-content">
-                <MarkdownRenderer markdown={apiOutput} />
-              </div>
-            </div>
-          )}
         </div>
+
+        {apiOutput && (
+          <div className="output-container">
+            <h3 className="output-header">TLDR </h3>
+
+            <div className="output-content">
+              <MarkdownRenderer markdown={apiOutput} />
+            </div>
+          </div>
+        )}
       </div>
-      <div className="badge-container grow">
+      {/* <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
           target="_blank"
@@ -114,7 +111,7 @@ const Home = () => {
             <p>build with buildspace</p>
           </div>
         </a>
-      </div>
+      </div> */}
       <ToastContainer />
     </div>
   )
