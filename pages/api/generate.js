@@ -11,7 +11,7 @@ const basePromptPrefix =
   'Give me a max 250-word summary of the following text. Focus on including useful, insightful and actionable information that can potentially help the reader save time, make more money, or improve their life in general. Text: '
 
 const finalPromptPrefix =
-  'Give me a clear and concise 300 word summary of the following text. The summary should include key insights which are valuable, useful and actionable. Text: '
+  'Give me a clear and concise 250 word summary of the following text. The summary should include key insights which are valuable, useful and actionable. Text: '
 const generateAction = async (req, res) => {
   const { text } = req.body
 

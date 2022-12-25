@@ -53,7 +53,7 @@ const Home = () => {
             </div>
             <div className="header-subtitle">
               <h2>
-                Paste text here and generate an effective 1 min summary. Good
+                Paste text here and generate a meaningful 1 min summary. Good
                 for long-ass articles.
               </h2>
             </div>
