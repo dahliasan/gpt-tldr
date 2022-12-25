@@ -90,6 +90,7 @@ But first, similar to how I began part one of this series, let’s revisit Pax A
                 isGenerating ? 'generate-button loading' : 'generate-button'
               }
               onClick={callGenerateEndpoint}
+              id="generate-btn"
             >
               <div className="generate">
                 {isGenerating ? (
