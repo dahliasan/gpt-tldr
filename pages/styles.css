@@ -14,7 +14,7 @@ h6 {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.7;
   font-family: var(--body-font);
 }
 
@@ -34,7 +34,7 @@ p {
   overflow: auto;
   position: relative;
   gap: 4em;
-  padding: 1em;
+  padding: 2em;
   width: fit-content;
 }
 
@@ -51,6 +51,8 @@ p {
   border-radius: 16px;
   padding: 1rem;
   max-width: 75ch;
+  background: #f0f0f0;
+  color: #000;
 }
 
 .header {
@@ -121,7 +123,7 @@ textarea {
 }
 
 .reading-time {
-  color: white;
+  color: #fff;
   opacity: 0.5;
   padding-left: 10px;
 }
@@ -251,7 +253,6 @@ textarea {
 }
 
 .output-header {
-  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -262,7 +263,7 @@ textarea {
 
 .output-content p {
   white-space: pre-line;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.7;
 }
 
 /* Loading ring animation */

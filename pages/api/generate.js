@@ -8,10 +8,10 @@ const configuration = new Configuration({
 const MAX_TOKENS = 3000
 const openai = new OpenAIApi(configuration)
 const basePromptPrefix =
-  'Give me a max 250-word summary of the following text. Text: '
+  'Give me a max 250-word summary of the following text. Focus on including useful, insightful and actionable information that can potentially help the reader save time, make more money, or improve their life in general. Text: '
 
 const finalPromptPrefix =
-  'Give me a clear and concise 1 minute summary of the following text. Focus on the key insights which are valuable, useful and actionable. Include specific details if they are helpful. Text: '
+  'Give me a clear and concise 300 word summary of the following text. The summary should include key insights which are valuable, useful and actionable. Text: '
 const generateAction = async (req, res) => {
   const { text } = req.body
 
@@ -78,7 +78,7 @@ const generateAction = async (req, res) => {
     const finalCompletion = await openai.createCompletion({
       model: 'text-davinci-003',
       prompt: `${finalPromptPrefix}${combinedSummaries}\n`,
-      temperature: 0.7,
+      temperature: 0.1,
       max_tokens: MAX_TOKENS,
     })
     const finalSummary = finalCompletion.data.choices.pop().text
