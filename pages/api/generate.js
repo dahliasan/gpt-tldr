@@ -5,7 +5,7 @@ import { cleanAndChunkText } from '../../utils/chunkText'
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 })
-const MAX_TOKENS = 3000
+const MAX_TOKENS = 1000
 const openai = new OpenAIApi(configuration)
 const basePromptPrefix =
   'Give me a max 250 word summary of the following text focusing on the most insightful and interesting information. Include specific details where possible. Text: '
