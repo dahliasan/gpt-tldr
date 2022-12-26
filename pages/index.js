@@ -64,10 +64,7 @@ But first, similar to how I began part one of this series, let’s revisit Pax A
               <h1>Gimme the tldr version</h1>
             </div>
             <div className="header-subtitle">
-              <h2>
-                Paste text here and generate a meaningful 1 min summary. Good
-                for long-ass articles.
-              </h2>
+              <h2>Paste text here and generate a smart 1 min summary.</h2>
             </div>
           </div>
 
