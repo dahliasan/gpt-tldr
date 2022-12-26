@@ -8,7 +8,7 @@ const configuration = new Configuration({
 const MAX_TOKENS = 3000
 const openai = new OpenAIApi(configuration)
 const basePromptPrefix =
-  'Give me a max 250-word summary of the following text. Focus on including useful, insightful and actionable information that can potentially help the reader save time, make more money, or improve their life in general. Text: '
+  'Give me an insightful max 250-word summary of the following text. Include specific details of entities and numbers where relevant. Text: '
 
 const finalPromptPrefix =
   'Give me a clear and concise 250 word summary of the following text. The summary should include key insights which are valuable, useful and actionable. Text: '
