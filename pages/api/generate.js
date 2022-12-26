@@ -8,10 +8,10 @@ const configuration = new Configuration({
 const MAX_TOKENS = 3000
 const openai = new OpenAIApi(configuration)
 const basePromptPrefix =
-  'Give me an insightful max 250-word summary of the following text. Include specific details of entities and numbers where relevant. Text: '
+  'Summarise the following text in 200 words or less focusing on insightful information. Include specific details of entities and numbers where possible. Text: '
 
 const finalPromptPrefix =
-  'Give me a clear and concise 250 word summary of the following text. The summary should include key insights which are valuable, useful and actionable. Text: '
+  'Give me a summary of the following text in 250 words or less. The summary should include key insights which are valuable, useful and actionable. Text: '
 const generateAction = async (req, res) => {
   const { text } = req.body
 
