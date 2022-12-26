@@ -11,7 +11,7 @@ const basePromptPrefix =
   'Give me a max 250 word summary of the following text focusing on the most insightful and interesting information. Include specific details of entities and numbers where possible. Text: '
 
 const finalPromptPrefix =
-  'Give me a max 250 word summary of the following text focusing on the most insightful and interesting information. Include specific details of entities and numbers where possible. Text: '
+  'Give me a max 250 word summary of the following text focusing on the most insightful, interesting, or actionable information. Include specific details of entities and numbers where possible. Text: '
 const generateAction = async (req, res) => {
   const { text } = req.body
 
